@@ -397,3 +397,11 @@ ad4858:
       - data_devices:
           - iio:device0
           - iio:device2
+ad3552r:
+  - ad3552r
+  - pyadi_iio_class_support:
+      - ad3552r
+  - emulate:
+      - filename: ad3552r.xml
+      - data_devices:
+          - iio:device1
