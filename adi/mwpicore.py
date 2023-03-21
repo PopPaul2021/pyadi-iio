@@ -79,3 +79,13 @@ class mwpicore(attribute, context_manager):
         self._set_iio_dev_attr_str("reg_access", "enabled", self._ctrl)
         self._set_iio_debug_attr_str("direct_reg_access", f"{reg} {value}", self._ctrl)
         self._set_iio_dev_attr_str("reg_access", "disabled", self._ctrl)
+
+    def check_matlab_ip(self): 
+        """Check if the design has the Simulink HDL DUT IP"""
+        sysid_string = str(self._ctx.attrs)
+
+        return ("MATLAB REFERENCE DESIGN:") in sysid_string
+   
+        
+        
+        
